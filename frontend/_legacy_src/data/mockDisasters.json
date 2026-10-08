@@ -1,0 +1,5 @@
+[
+  { "id": "DIS-001", "type": "flood", "node": "N_2_3", "severity": 0.8, "timestamp": "2026-08-01T00:30:00Z", "label": "Flash Flood - Sector 3" },
+  { "id": "DIS-002", "type": "landslide", "node": "N_3_4", "severity": 0.9, "timestamp": "2026-08-01T00:25:00Z", "label": "Landslide - Highway Junction" },
+  { "id": "DIS-003", "type": "earthquake", "node": "N_4_1", "severity": 0.6, "timestamp": "2026-08-01T00:35:00Z", "label": "Minor Tremor - South District" }
+]

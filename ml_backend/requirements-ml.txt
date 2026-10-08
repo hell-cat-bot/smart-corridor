@@ -1,0 +1,21 @@
+# Optional — the ML detector (YOLOv8 vehicle counting + ResNet50 hazard
+# classification behind POST /infer/frame).
+#
+#   pip install -r requirements.txt
+#   pip install -r requirements-ml.txt
+#
+# Everything else in ml_backend runs without these. Until they are installed the
+# detector reports itself unavailable and the rest of the backend is unaffected,
+# so skip this file if you only need the simulation.
+#
+# Roughly 300MB on Windows (PyPI ships the CPU build of torch for Windows; the
+# CUDA builds come from pytorch.org's own index and are far larger).
+#
+# Why these floors: torch 2.4 has no Python 3.13 wheels — 2.6.0 was the first
+# release that did. torchvision 0.21 is the release paired with torch 2.6, and
+# pip will match them for you within these ranges.
+
+torch>=2.6,<3.0
+torchvision>=0.21,<1.0
+ultralytics>=8.3,<9.0
+pillow>=10.4,<12.0

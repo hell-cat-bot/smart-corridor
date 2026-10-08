@@ -1,0 +1,8 @@
+[
+  { "id": "AMB-001", "type": "ambulance", "priority": 1, "currentNode": "N_0_0", "destinationNode": "N_5_5", "status": "waiting", "eta": 480, "heading": 135, "health": 85, "label": "Ambulance Alpha" },
+  { "id": "AMB-002", "type": "ambulance", "priority": 1, "currentNode": "N_1_3", "destinationNode": "N_4_5", "status": "waiting", "eta": 320, "heading": 180, "health": 92, "label": "Ambulance Bravo" },
+  { "id": "FT-001", "type": "firetruck", "priority": 2, "currentNode": "N_3_0", "destinationNode": "N_5_4", "status": "waiting", "eta": 540, "heading": 90, "health": 78, "label": "Fire Unit 1" },
+  { "id": "VH-001", "type": "regular", "priority": 3, "currentNode": "N_2_2", "destinationNode": "N_4_4", "status": "en_route", "eta": 600, "heading": 160, "health": 100, "label": "Civilian Vehicle 1" },
+  { "id": "VH-002", "type": "regular", "priority": 3, "currentNode": "N_0_4", "destinationNode": "N_3_1", "status": "waiting", "eta": 720, "heading": 225, "health": 100, "label": "Civilian Vehicle 2" },
+  { "id": "AMB-003", "type": "ambulance", "priority": 1, "currentNode": "N_4_2", "destinationNode": "N_1_5", "status": "waiting", "eta": 390, "heading": 45, "health": 70, "label": "Ambulance Charlie" }
+]

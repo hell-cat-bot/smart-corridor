@@ -1,0 +1,34 @@
+# Core backend — the simulation, the API and the WebSocket stream.
+# This is everything you need to run ml_backend and drive the frontend.
+#
+#   pip install -r requirements.txt
+#
+# Ranges rather than exact pins, deliberately: the exact pins this file used to
+# carry had no wheels for Python 3.13 and the install failed outright. Each line
+# below is bounded to the current major version, so pip picks a build that
+# exists for whatever Python you are on (3.10 through 3.13 all work).
+
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30,<1.0
+pydantic>=2.9,<3.0
+pydantic-settings>=2.5,<3.0
+python-dotenv>=1.0,<2.0
+websockets>=13.1,<16.0
+httpx>=0.27,<1.0
+
+# Dev / testing
+pytest>=8.3
+pytest-asyncio>=0.24
+
+# --- Not here on purpose -----------------------------------------------------
+#
+# numpy: nothing in app/ imports it. It appeared only in a docstring, and
+# pinning numpy==1.26.4 forced a 15MB source build on Python 3.13 (that version
+# has no 3.13 wheel). torch and ultralytics pull in a numpy that suits them.
+#
+# torch / torchvision / ultralytics / pillow: the ML models. These are optional
+# — the simulation, the API and the WebSocket stream all run without them, and
+# the detector reports itself as unavailable rather than crashing. They are a
+# ~300MB download, so they live in their own file:
+#
+#   pip install -r requirements-ml.txt
